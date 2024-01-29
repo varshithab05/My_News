@@ -1,0 +1,34 @@
+button.search-Btn.btn.btn-custom {
+    border-color: rgb(211, 211, 211);
+    color: #EEE;
+}
+button.search-Btn.btn.btn-custom:hover {
+    border-color: rgb(211, 211, 211);
+    color: rgb(212, 211, 211);
+}
+button.search-Btn.btn.btn-custom:active {
+    transform: scale(0.9);
+    transition: 2s;
+}
+button.btn-link.btn.btn-custom:visited{
+    color: #EEE;
+}
+nav.bg-body-tertiary.navbar.navbar-expand-lg.navbar-light{
+    background-color: #2d2d46 !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+}
+button.btn-link.btn.btn-custom{
+    color: #b2b0b0 !important; 
+    text-decoration: none;
+    padding: 5px ;
+}
+button.btn-link.btn.btn-custom:hover{
+    color: #EEE !important;
+}
+button.btn-link.btn.btn-custom:active{
+    color: #EEE !important;
+}

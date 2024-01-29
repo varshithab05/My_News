@@ -1,0 +1,71 @@
+
+.containerG{
+    margin-left: 200px !important;
+    margin-top: 80px;
+    overflow: hidden;
+}
+.cardDiv.card{
+    height: fit-content;
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+}
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+img.card-img-top{
+    height: 100%;
+    width: 240px;
+    object-fit: contain;
+    align-self: center;
+}
+
+.cta {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+button.cta.btn.btn-custom{
+    padding-left: 0px;
+}
+button.cta.btn.btn-custom:focus{
+    border: none;
+}
+.cta span {
+    font-size: 14px;
+    padding-right: 15px;
+}
+
+.cta svg {
+    transform: translateX(-8px);
+    transition: all 0.3s ease;
+}
+
+.cta:hover svg {
+    transform: translateX(0);
+}
+.cta::after{
+    border: none;
+}
+.cta:active svg {
+    transform: scale(0.9);
+    border: none;
+}
+@media screen and (max-width:767px) {
+    .cardDiv.card{
+        display: flex !important;
+        flex-direction: column !important;
+    }
+}
+  
+@media (max-width:426px) {
+    .containerG{
+        margin-left: 5px !important;
+    }
+}
+
+  

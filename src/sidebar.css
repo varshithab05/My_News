@@ -1,0 +1,46 @@
+*{
+    font-size: 16px;
+}
+.sbar{
+    position: fixed;
+    left: 0;
+    top: 56px;
+    height: 100%;
+    width: 200px;
+    padding: 0px 10px 0px 0px;
+}
+.adBox{
+    margin-bottom: 5px;
+    padding: 10px 10px 10px 20px ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #2d2d46 ;
+    color: #EEE;
+}
+.date{
+    /* background-color: rgb(121, 180, 180); */
+    height: 20%;
+}
+.climate{
+    height: 20%;
+    /* background-color: bisque; */
+}
+.prices{
+    height: 60%;
+    /* background-color: rgba(0, 0, 0, 0.889); */
+    color: #EEE;
+}
+.climate p,
+.date p{
+    margin-bottom: 0 !important;
+}
+.date .d{
+    margin-top: 5px;
+}
+@media (max-width:426px) {
+    .sbar{
+        display: none;
+    }
+}
