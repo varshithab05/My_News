@@ -24,58 +24,12 @@ function Sidebar() {
   const [currDate , setDate] = useState(setDateT());
   const [currDay ,setDay] = useState(day());
   const [place,setPlace] = useState();
-  const [temp,setTemp] = useState();
-  const [lat,setLat] = useState();
-  const [lon,setLon] = useState();
-    
-  useEffect(()=>{
-    const controller = new AbortController();
-    const signal = controller.signal;
-    axios.get(`http://api.weatherapi.com/v1/current.json?q=13.5631658,80.0199452&key=dcdd6e0821ac4a808b3145541242901`,signal)
-    .then((response)=>{
-      console.log(response.data.location.name);
-      setPlace(response.data.location.name);
-      console.log(response.data.current.temp_c);
-      setTemp(response.data.current.temp_c);
-    }).catch(function(error){
-        if (error.name === 'AbortError') {
-            console.log('Request aborted');
-        } else {
-            console.log('Error:', error);
-        }
-    });
-    return () => {
-        controller.abort();
-    };
-  },[lat,lon]);
-
-  useEffect(()=>{
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          setLat(position.coords.latitude);
-          setLon(position.coords.longitude);
-        },
-        (error) => {
-          console.error('Error getting user location:', error);
-        }
-      );
-    }
-    else {
-      console.error('Geolocation is not supported by this browser.');
-    }
-  },[]);
   return (
     <div className='sbar'> 
       <div className='date adBox'>
         <MdDateRange size={20}/>
         <p className='d'>{currDate}</p>
         <p>{currDay}</p>
-      </div>
-      <div className='climate adBox'>
-        <TiWeatherPartlySunny size={20} />
-        <p>{place}</p>
-        <p>temperature : {temp} C</p>
       </div>
       <div className='prices adBox'>
         <GiGoldBar size={30} />
