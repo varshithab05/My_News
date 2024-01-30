@@ -13,12 +13,12 @@ export default function NewsData(props){
         const controller = new AbortController();
         const signal = controller.signal;
         let promis = [
-            'https://newsapi.org/v2/top-headlines?language=en&apiKey=f8ac29b587b5488e8d182c5417932e5d',
-            'https://newsapi.org/v2/top-headlines?language=en&country=in&category=sports&apiKey=f8ac29b587b5488e8d182c5417932e5d',
-            'https://newsapi.org/v2/top-headlines?language=en&country=in&category=technology&apiKey=f8ac29b587b5488e8d182c5417932e5d',
-            'https://newsapi.org/v2/top-headlines?language=en&country=in&category=health&apiKey=f8ac29b587b5488e8d182c5417932e5d',
-            'https://newsapi.org/v2/top-headlines?language=en&country=in&category=science&apiKey=f8ac29b587b5488e8d182c5417932e5d',
-            'https://newsapi.org/v2/top-headlines?language=en&country=in&category=business&apiKey=f8ac29b587b5488e8d182c5417932e5d'
+            'https://saurav.tech/NewsAPI/everything/bbc-news.json',
+            'https://saurav.tech/NewsAPI/top-headlines/category/sports/in.json',
+            'https://saurav.tech/NewsAPI/top-headlines/category/technology/in.json',
+            'https://saurav.tech/NewsAPI/top-headlines/category/health/in.json',
+            'https://saurav.tech/NewsAPI/top-headlines/category/science/in.json',
+            'https://saurav.tech/NewsAPI/top-headlines/category/business/in.json'
         ];
 
         axios.all(promis.map((promise)=>axios.get(promise,{signal}))
