@@ -14,12 +14,7 @@ function NavBar() {
   const [message, setMessage] = useState('');
   const c = useContext(context);
   useEffect(()=>{
-  //   // function handleClick(e){
-  //     // console.log(e.target.value);
-      // c.setLinkClicked(e.target.value);
       console.log(c.linkClicked);
-  //     console.log("nav.jsx");
-  //     console.log(c);
   },[c.linkClicked]);
   const handleChange = event => {
     setMessage(event.target.value);
@@ -28,9 +23,7 @@ function NavBar() {
   };
   const searchClick = (event)=>{
     event.preventDefault();
-    c.setLinkClicked("search")
-    // 👇️ value of input field
-    console.log('handleClick 👉️', message);
+    c.setLinkClicked("search");
 
     const controller = new AbortController();
     const signal = controller.signal;

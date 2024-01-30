@@ -7,10 +7,6 @@ import NewsState from './state';
 import NewsData from './NewsData';
 
 function App() {
-  // useEffect(()=>{
-  //   newsData();
-  // },[]);
-
   return (
     <>
       <NewsState>
